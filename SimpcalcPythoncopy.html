@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Calculator(Python)</title>
+
+    <style>
+        body {
+            background-color: rgb(255, 176, 115);
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div style="width: 50px; height: 20px; padding: 5px; margin-right: 10px; background-color: #ff0000;">
+        <a href="main.html" target="_self" style="display: flex; justify-content: center; align-items: center; text-decoration: none; color: #ffffff; width: 100%; height: 100%;">X</a>
+    </div>
+    <p style="font-size: 50px; text-align: center;">Simple Calculator (Python)</p>
+       <p>
+        <pre>
+            def main():
+            # Calculator made in Python
+            import math
+            import time
+        
+            num1 = float(input("enter your first number: \n"))
+            num2 = float(input("enter your second number: \n"))
+            operation = str(input("enter your operation '+, -, *, /, ^, &' \n"))
+        
+            # if user types the wrong operation
+            if operation != "+":
+                if operation != "-":
+                    if operation != "/":
+                        if operation != "*":
+                            if operation != "^":
+                                if operation != "&":
+                                    if operation != "help":
+                                        print("Please choose a valid operation")
+                                        operation = str(input("enter your valid operation '+, -, *, /, ^, &' \n"))
+        
+        
+            # Help Desk
+        
+            def exi():
+                print("exiting...")
+                main()
+        
+            if operation == "help":
+                print('Welcome to the "Help Desk" of this program!')
+                time.sleep(1)
+                print("Do you want to view all the possible operations and what they do? y/n/e")
+                time.sleep(0.5)
+                ans = str(input())
+                if ans == "y" or ans == "Y":
+                    time.sleep(0.5)
+                    print("\n The possible operators as of now are, +, -, *, /, ^, & \n")
+                    time.sleep(0.5)
+                    print("+ adds the numbers. \n- subtracts the numbers. \n* multiplies the numbers. \n/ divides the numbers \n^ exponentiates num1 with num2. \n& finds the accurate sin, cos and tan values of both numbers \n")
+                    exi()
+                elif ans == "n" or ans == "N":
+                    time.sleep(0.5)
+                    print ("Do you want to view the changelog? y/n/e ")
+                    time.sleep(0.5)
+                    ans1 = str(input())
+                    if ans1 == "y" or ans1 == "Y":
+                        time.sleep(0.5)
+                        print("\n No changelog yet!")
+                        exi()
+                    elif ans1 == "n" or ans1 == "N":
+                        time.sleep(0.5)
+                        print("Would you like to view the source code of the program? y/n ")
+                        time.sleep(0.5)
+                        ans2 = str(input())
+                        if ans2 == "y" or ans2 == "Y":
+                            print("\n It will soon be available on Github :)")
+                            exi()
+                        elif ans2 == "n" or ans2 == "N":
+                            exi()
+                    elif ans1 == "e" or ans1 == "E":
+                        exi()
+        
+                elif ans == "e" or ans == "E":
+                    exi()
+        
+        
+            # Calculating
+            if operation == "+":
+                result = num1+num2
+                print(num1,"+",num2, "=",result)
+        
+            if operation == "-":
+                result = num1-num2
+                print(num1,"-",num2, "=",result)
+        
+            if operation == "*":
+                result = num1*num2
+                print(num1,"*",num2, "=",result)
+        
+            if operation == "/":
+                result = num1/num2
+                print(num1,"/",num2, "=",result)
+        
+            if operation == "^":
+                result = num1 ** num2
+                print(num1,"^",num2,"=",result)
+        
+            if operation == "&":
+                numm1 = num1 * math.pi/180
+                numm2 = num2 * math.pi/180
+                print("Accurate Sin, Cos, Tan values of num1", math.sin(numm1),  math.cos(numm1),  math.tan(numm1), "\n")
+                print("Accurate Sin, Cos, Tan values of num2", math.sin(numm2),  math.cos(numm2),  math.tan(numm2), "\n")
+        
+        main()
+            
+        </pre>
+    </p>
+
+
+
+
+
+
+</body>
+
+</html>

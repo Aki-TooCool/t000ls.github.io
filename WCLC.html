@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Word Counter & Letter Counter</title>
+
+    <style>
+        body {
+            background-color: rgb(255, 176, 115);
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div style="width: 50px; height: 20px; padding: 5px; margin-right: 10px; background-color: #ff0000;">
+        <a href="main.html" target="_self" style="display: flex; justify-content: center; align-items: center; text-decoration: none; color: #ffffff; width: 100%; height: 100%;">X</a>
+    </div>
+    
+    <p style="font-size: 50px; text-align: center;">Letter Counter</p>
+       <p>
+        <pre>
+            inpt = str(input())
+            count = 0
+            
+            inp = inpt.replace(" ", "")
+            # Removing the space cuz not needed
+            for x in inp:
+                count += 1
+            
+            print(count)
+            
+        </pre>
+    </p>
+
+    <p style="font-size: 50px; text-align: center;">Word Counter</p>
+       <p>
+        <pre>
+            inpt = str(input())
+            count = 1
+            # Starting from 1 since a space is used from the 2nd word
+            
+            
+            for x in inpt:
+                if x == " ":
+                    count += 1
+                    # count only if x is a space - indicating a new word
+            
+            print(count)
+            
+        </pre>
+    </p>
+
+
+
+
+
+
+</body>
+
+</html>
